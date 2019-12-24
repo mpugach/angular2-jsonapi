@@ -1,0 +1,26 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export { DEFAULT_OPTIONS, JsonModelConverter } from './converters/json-model/json-model.converter';
+export { HasMany } from './decorators/has-many.decorator';
+export { BelongsTo } from './decorators/belongs-to.decorator';
+export { Attribute } from './decorators/attribute.decorator';
+export { NestedAttribute } from './decorators/nested-attribute.decorator';
+export { JsonAttribute } from './decorators/json-attribute.decorator';
+export { JsonApiModelConfig } from './decorators/json-api-model-config.decorator';
+export { JsonApiDatastoreConfig } from './decorators/json-api-datastore-config.decorator';
+export { JsonApiMetaModel } from './models/json-api-meta.model';
+export { JsonApiModel } from './models/json-api.model';
+export { JsonApiNestedModel } from './models/json-nested.model';
+export { ErrorResponse } from './models/error-response.model';
+export { JsonApiQueryData } from './models/json-api-query-data';
+export {} from './interfaces/overrides.interface';
+export {} from './interfaces/json-model-converter-config.interface';
+export {} from './interfaces/datastore-config.interface';
+export {} from './interfaces/model-config.interface';
+export {} from './interfaces/attribute-decorator-options.interface';
+export {} from './interfaces/property-converter.interface';
+export { PROVIDERS, JsonApiDatastore } from './providers';
+export { JsonApiModule } from './module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2FuZ3VsYXIyLWpzb25hcGkvIiwic291cmNlcyI6WyJwdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxvREFBYyw4Q0FBOEMsQ0FBQztBQUU3RCx3QkFBYyxpQ0FBaUMsQ0FBQztBQUNoRCwwQkFBYyxtQ0FBbUMsQ0FBQztBQUNsRCwwQkFBYyxrQ0FBa0MsQ0FBQztBQUNqRCxnQ0FBYyx5Q0FBeUMsQ0FBQztBQUN4RCw4QkFBYyx1Q0FBdUMsQ0FBQztBQUN0RCxtQ0FBYyw4Q0FBOEMsQ0FBQztBQUM3RCx1Q0FBYyxrREFBa0QsQ0FBQztBQUVqRSxpQ0FBYyw4QkFBOEIsQ0FBQztBQUM3Qyw2QkFBYyx5QkFBeUIsQ0FBQztBQUN4QyxtQ0FBYyw0QkFBNEIsQ0FBQztBQUMzQyw4QkFBYywrQkFBK0IsQ0FBQztBQUM5QyxpQ0FBYyw4QkFBOEIsQ0FBQztBQUU3QyxlQUFjLGtDQUFrQyxDQUFDO0FBQ2pELGVBQWMsb0RBQW9ELENBQUM7QUFDbkUsZUFBYyx5Q0FBeUMsQ0FBQztBQUN4RCxlQUFjLHFDQUFxQyxDQUFDO0FBQ3BELGVBQWMsb0RBQW9ELENBQUM7QUFDbkUsZUFBYywyQ0FBMkMsQ0FBQztBQUUxRCw0Q0FBYyxhQUFhLENBQUM7QUFFNUIsOEJBQWMsVUFBVSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnLi9jb252ZXJ0ZXJzL2pzb24tbW9kZWwvanNvbi1tb2RlbC5jb252ZXJ0ZXInO1xuXG5leHBvcnQgKiBmcm9tICcuL2RlY29yYXRvcnMvaGFzLW1hbnkuZGVjb3JhdG9yJztcbmV4cG9ydCAqIGZyb20gJy4vZGVjb3JhdG9ycy9iZWxvbmdzLXRvLmRlY29yYXRvcic7XG5leHBvcnQgKiBmcm9tICcuL2RlY29yYXRvcnMvYXR0cmlidXRlLmRlY29yYXRvcic7XG5leHBvcnQgKiBmcm9tICcuL2RlY29yYXRvcnMvbmVzdGVkLWF0dHJpYnV0ZS5kZWNvcmF0b3InO1xuZXhwb3J0ICogZnJvbSAnLi9kZWNvcmF0b3JzL2pzb24tYXR0cmlidXRlLmRlY29yYXRvcic7XG5leHBvcnQgKiBmcm9tICcuL2RlY29yYXRvcnMvanNvbi1hcGktbW9kZWwtY29uZmlnLmRlY29yYXRvcic7XG5leHBvcnQgKiBmcm9tICcuL2RlY29yYXRvcnMvanNvbi1hcGktZGF0YXN0b3JlLWNvbmZpZy5kZWNvcmF0b3InO1xuXG5leHBvcnQgKiBmcm9tICcuL21vZGVscy9qc29uLWFwaS1tZXRhLm1vZGVsJztcbmV4cG9ydCAqIGZyb20gJy4vbW9kZWxzL2pzb24tYXBpLm1vZGVsJztcbmV4cG9ydCAqIGZyb20gJy4vbW9kZWxzL2pzb24tbmVzdGVkLm1vZGVsJztcbmV4cG9ydCAqIGZyb20gJy4vbW9kZWxzL2Vycm9yLXJlc3BvbnNlLm1vZGVsJztcbmV4cG9ydCAqIGZyb20gJy4vbW9kZWxzL2pzb24tYXBpLXF1ZXJ5LWRhdGEnO1xuXG5leHBvcnQgKiBmcm9tICcuL2ludGVyZmFjZXMvb3ZlcnJpZGVzLmludGVyZmFjZSc7XG5leHBvcnQgKiBmcm9tICcuL2ludGVyZmFjZXMvanNvbi1tb2RlbC1jb252ZXJ0ZXItY29uZmlnLmludGVyZmFjZSc7XG5leHBvcnQgKiBmcm9tICcuL2ludGVyZmFjZXMvZGF0YXN0b3JlLWNvbmZpZy5pbnRlcmZhY2UnO1xuZXhwb3J0ICogZnJvbSAnLi9pbnRlcmZhY2VzL21vZGVsLWNvbmZpZy5pbnRlcmZhY2UnO1xuZXhwb3J0ICogZnJvbSAnLi9pbnRlcmZhY2VzL2F0dHJpYnV0ZS1kZWNvcmF0b3Itb3B0aW9ucy5pbnRlcmZhY2UnO1xuZXhwb3J0ICogZnJvbSAnLi9pbnRlcmZhY2VzL3Byb3BlcnR5LWNvbnZlcnRlci5pbnRlcmZhY2UnO1xuXG5leHBvcnQgKiBmcm9tICcuL3Byb3ZpZGVycyc7XG5cbmV4cG9ydCAqIGZyb20gJy4vbW9kdWxlJztcbiJdfQ==
