@@ -2021,7 +2021,10 @@ var JsonApiDatastore = /** @class */ (function () {
          */
         function (data) {
             /** @type {?} */
-            var model = _this.deserializeModel(_this.datastoreConfig.models[data.type], data);
+            var type = _this.datastoreConfig.models[data.type];
+            type = type ? type : modelType;
+            /** @type {?} */
+            var model = _this.deserializeModel(type, data);
             _this.addToStore(model);
             if (body.included) {
                 model.syncRelationships(data, body.included.concat(data));

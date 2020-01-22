@@ -1694,7 +1694,10 @@ class JsonApiDatastore {
          */
         (data) => {
             /** @type {?} */
-            const model = this.deserializeModel(this.datastoreConfig.models[data.type], data);
+            let type = this.datastoreConfig.models[data.type];
+            type = type ? type : modelType;
+            /** @type {?} */
+            const model = this.deserializeModel(type, data);
             this.addToStore(model);
             if (body.included) {
                 model.syncRelationships(data, body.included.concat(data));
