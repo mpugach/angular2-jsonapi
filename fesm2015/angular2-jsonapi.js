@@ -276,7 +276,7 @@ class DateConverter {
      * @return {?}
      */
     unmask(value) {
-        return value.toISOString();
+        return value ? value.toISOString() : value;
     }
 }
 

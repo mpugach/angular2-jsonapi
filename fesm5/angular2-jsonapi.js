@@ -339,7 +339,7 @@ var DateConverter = /** @class */ (function () {
      * @return {?}
      */
     function (value) {
-        return value.toISOString();
+        return value ? value.toISOString() : value;
     };
     return DateConverter;
 }());
