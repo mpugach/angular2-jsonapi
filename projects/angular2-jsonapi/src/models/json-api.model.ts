@@ -33,6 +33,7 @@ export class JsonApiModel {
   id: string;
   public modelInitialization = false;
   public relationshipLinks = {};
+  public unresolvedRelations = {};
 
   [key: string]: any;
 
@@ -195,6 +196,8 @@ export class JsonApiModel {
 
               if (relationshipModel) {
                 this[metadata.propertyName] = relationshipModel;
+              } else {
+                this.unresolvedRelations[metadata.propertyName] = dataRelationship;
               }
             } else {
               throw {message: `parseBelongsTo - Model type for relationship ${typeName} not found.`};
