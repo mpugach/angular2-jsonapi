@@ -727,6 +727,7 @@ class JsonApiModel {
         this.internalDatastore = internalDatastore;
         this.modelInitialization = false;
         this.relationshipLinks = {};
+        this.unresolvedRelations = {};
         if (data) {
             this.modelInitialization = true;
             this.id = data.id;
@@ -906,6 +907,9 @@ class JsonApiModel {
                             if (relationshipModel) {
                                 this[metadata.propertyName] = relationshipModel;
                             }
+                            else {
+                                this.unresolvedRelations[metadata.propertyName] = dataRelationship;
+                            }
                         }
                         else {
                             throw { message: `parseBelongsTo - Model type for relationship ${typeName} not found.` };
@@ -1008,6 +1012,8 @@ if (false) {
     JsonApiModel.prototype.modelInitialization;
     /** @type {?} */
     JsonApiModel.prototype.relationshipLinks;
+    /** @type {?} */
+    JsonApiModel.prototype.unresolvedRelations;
     /** @type {?} */
     JsonApiModel.prototype.lastSyncModels;
     /**

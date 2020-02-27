@@ -7,6 +7,7 @@ export declare class JsonApiModel {
     id: string;
     modelInitialization: boolean;
     relationshipLinks: {};
+    unresolvedRelations: {};
     [key: string]: any;
     lastSyncModels: Array<any>;
     constructor(internalDatastore: JsonApiDatastore, data?: any);
