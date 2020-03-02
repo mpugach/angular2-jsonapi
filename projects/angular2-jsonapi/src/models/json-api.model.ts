@@ -33,7 +33,7 @@ export class JsonApiModel {
   id: string;
   public modelInitialization = false;
   public relationshipLinks = {};
-  public unresolvedRelations = {};
+  public unresolvedRelations: any = {};
 
   [key: string]: any;
 
