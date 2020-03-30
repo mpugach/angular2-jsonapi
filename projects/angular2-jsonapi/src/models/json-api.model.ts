@@ -232,6 +232,12 @@ export class JsonApiModel {
         }
 
         relationshipList.push(newObject);
+      } else {
+        const type = Reflect.getMetadata('JsonApiDatastoreConfig', this.internalDatastore.constructor).models[typeName];
+        const newObject: T = this.internalDatastore.peekRecord(type, item.id);
+        if (newObject) {
+          relationshipList.push(newObject);
+        }
       }
     });
 
