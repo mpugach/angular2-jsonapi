@@ -952,6 +952,15 @@ class JsonApiModel {
                 }
                 relationshipList.push(newObject);
             }
+            else {
+                /** @type {?} */
+                const type = Reflect.getMetadata('JsonApiDatastoreConfig', this.internalDatastore.constructor).models[typeName];
+                /** @type {?} */
+                const newObject = this.internalDatastore.peekRecord(type, item.id);
+                if (newObject) {
+                    relationshipList.push(newObject);
+                }
+            }
         }));
         return relationshipList;
     }

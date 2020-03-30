@@ -1299,6 +1299,15 @@
                     }
                     relationshipList.push(newObject);
                 }
+                else {
+                    /** @type {?} */
+                    var type = Reflect.getMetadata('JsonApiDatastoreConfig', _this.internalDatastore.constructor).models[typeName];
+                    /** @type {?} */
+                    var newObject = _this.internalDatastore.peekRecord(type, item.id);
+                    if (newObject) {
+                        relationshipList.push(newObject);
+                    }
+                }
             }));
             return relationshipList;
         };
