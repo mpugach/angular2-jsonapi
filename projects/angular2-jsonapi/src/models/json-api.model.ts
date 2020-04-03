@@ -161,7 +161,7 @@ export class JsonApiModel {
                   allModels = allModels.concat(relationshipModels);
                 }
               } else {
-                throw {message: `parseHasMany - Model type for relationship ${typeName} not found.`};
+                console.error(`parseHasMany - Model type for relationship ${typeName} not found.`);
               }
             }
           }
@@ -200,7 +200,7 @@ export class JsonApiModel {
                 this.unresolvedRelations[metadata.propertyName] = dataRelationship;
               }
             } else {
-              throw {message: `parseBelongsTo - Model type for relationship ${typeName} not found.`};
+              console.error(`parseBelongsTo - Model type for relationship ${typeName} not found.`);
             }
           }
         }
