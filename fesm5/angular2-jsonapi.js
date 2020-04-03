@@ -977,7 +977,7 @@ var JsonApiModel = /** @class */ (function () {
                                         }
                                     }
                                     else {
-                                        throw { message: "parseHasMany - Model type for relationship " + typeName + " not found." };
+                                        console.error("parseHasMany - Model type for relationship " + typeName + " not found.");
                                     }
                                 }
                             }
@@ -1046,7 +1046,7 @@ var JsonApiModel = /** @class */ (function () {
                                 }
                             }
                             else {
-                                throw { message: "parseBelongsTo - Model type for relationship " + typeName + " not found." };
+                                console.error("parseBelongsTo - Model type for relationship " + typeName + " not found.");
                             }
                         }
                     }

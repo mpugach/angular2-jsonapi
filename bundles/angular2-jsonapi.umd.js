@@ -1171,7 +1171,7 @@
                                             }
                                         }
                                         else {
-                                            throw { message: "parseHasMany - Model type for relationship " + typeName + " not found." };
+                                            console.error("parseHasMany - Model type for relationship " + typeName + " not found.");
                                         }
                                     }
                                 }
@@ -1240,7 +1240,7 @@
                                     }
                                 }
                                 else {
-                                    throw { message: "parseBelongsTo - Model type for relationship " + typeName + " not found." };
+                                    console.error("parseBelongsTo - Model type for relationship " + typeName + " not found.");
                                 }
                             }
                         }
