@@ -57,8 +57,7 @@ class JsonApiNestedModel {
          * @return {?}
          */
         (serializedName) => {
-            if (this && this[serializedName] !== null &&
-                this[serializedName] !== undefined && serializedName !== 'nestedDataSerialization') {
+            if (this && serializedName !== 'nestedDataSerialization') {
                 properties[serializedNameToPropertyName[serializedName]] = this[serializedName];
             }
         }));
@@ -1536,7 +1535,7 @@ class JsonApiDatastore {
          * @return {?}
          */
         (serializedName) => {
-            if (attributes && attributes[serializedName] !== null && attributes[serializedName] !== undefined) {
+            if (attributes) {
                 properties[serializedNameToPropertyName[serializedName]] = attributes[serializedName];
             }
         }));

@@ -72,8 +72,7 @@ var JsonApiNestedModel = /** @class */ (function () {
          * @return {?}
          */
         function (serializedName) {
-            if (_this && _this[serializedName] !== null &&
-                _this[serializedName] !== undefined && serializedName !== 'nestedDataSerialization') {
+            if (_this && serializedName !== 'nestedDataSerialization') {
                 properties[serializedNameToPropertyName[serializedName]] = _this[serializedName];
             }
         }));
@@ -1824,7 +1823,7 @@ var JsonApiDatastore = /** @class */ (function () {
          * @return {?}
          */
         function (serializedName) {
-            if (attributes && attributes[serializedName] !== null && attributes[serializedName] !== undefined) {
+            if (attributes) {
                 properties[serializedNameToPropertyName[serializedName]] = attributes[serializedName];
             }
         }));
