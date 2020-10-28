@@ -223,7 +223,7 @@ export class JsonApiDatastore {
     const properties: any = {};
 
     Object.keys(serializedNameToPropertyName).forEach((serializedName) => {
-      if (attributes && attributes[serializedName] !== null && attributes[serializedName] !== undefined) {
+      if (attributes) {
         properties[serializedNameToPropertyName[serializedName]] = attributes[serializedName];
       }
     });

@@ -28,8 +28,7 @@ export class JsonApiNestedModel {
     const serializedNameToPropertyName = this.getModelPropertyNames();
     const properties: any = {};
     Object.keys(serializedNameToPropertyName).forEach((serializedName) => {
-      if (this && this[serializedName] !== null &&
-        this[serializedName] !== undefined && serializedName !== 'nestedDataSerialization') {
+      if (this && serializedName !== 'nestedDataSerialization') {
         properties[serializedNameToPropertyName[serializedName]] = this[serializedName];
       }
     });
